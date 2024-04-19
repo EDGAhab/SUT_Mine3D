@@ -2,7 +2,32 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="GameActivityTest">
+        <State />
+      </entry>
       <entry key="app">
+        <State>
+          <targetSelectedWithDropDown>
+            <Target>
+              <type value="QUICK_BOOT_TARGET" />
+              <deviceKey>
+                <Key>
+                  <type value="VIRTUAL_DEVICE_PATH" />
+                  <value value="C:\Users\Feilian Huang\.android\avd\Pixel_Fold_API_30.avd" />
+                </Key>
+              </deviceKey>
+            </Target>
+          </targetSelectedWithDropDown>
+          <timeTargetWasSelectedWithDropDown value="2024-04-13T16:02:55.709141600Z" />
+        </State>
+      </entry>
+      <entry key="minesView_isDisplayed()">
+        <State />
+      </entry>
+      <entry key="testButton1()">
+        <State />
+      </entry>
+      <entry key="testDummy()">
         <State />
       </entry>
     </value>
