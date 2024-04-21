@@ -49,7 +49,6 @@ public class SwitchButton extends AbstractDrawable {
     @Override
     public void setPosition(int x, int width, int y, int height) {
         super.setPosition(x, width, y, height);
-
         leftTopCorner = new Point(x, y);
         rightTopCorner = new Point(x + width, y);
         leftBottomCorner = new Point(x, y + height);

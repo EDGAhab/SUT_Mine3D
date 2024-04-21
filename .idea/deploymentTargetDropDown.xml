@@ -5,7 +5,10 @@
       <entry key="GameStatusTest">
         <State />
       </entry>
-      <entry key="OptionActivityTest">
+      <entry key="MineSweeperGameTest">
+        <State />
+      </entry>
+      <entry key="ReviewReminderTest">
         <State />
       </entry>
       <entry key="app">
@@ -24,13 +27,10 @@
           <timeTargetWasSelectedWithDropDown value="2024-04-13T16:02:55.709141600Z" />
         </State>
       </entry>
-      <entry key="testGameEnd()">
+      <entry key="reviewReminder_DoesNotShowDialog_WhenAlreadyReviewed()">
         <State />
       </entry>
-      <entry key="testbutton()">
-        <State />
-      </entry>
-      <entry key="toggleButtons_UpdateSharedPreferences()">
+      <entry key="reviewReminder_SetsReviewed_WhenUserChoosesToRate()">
         <State />
       </entry>
     </value>
