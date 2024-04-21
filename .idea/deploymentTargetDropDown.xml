@@ -2,9 +2,6 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
-      <entry key="GameStatusTest">
-        <State />
-      </entry>
       <entry key="MineSweeperGameTest">
         <State />
       </entry>
@@ -31,6 +28,9 @@
         <State />
       </entry>
       <entry key="reviewReminder_SetsReviewed_WhenUserChoosesToRate()">
+        <State />
+      </entry>
+      <entry key="userPlaying()">
         <State />
       </entry>
     </value>
