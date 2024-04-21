@@ -1,36 +1,35 @@
 package cos.premy.mines;
 
-import android.support.test.rule.ActivityTestRule;
-import android.support.test.runner.AndroidJUnit4;
+import androidx.test.espresso.matcher.ViewMatchers;
+import androidx.test.ext.junit.rules.ActivityScenarioRule;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.filters.LargeTest;
+
+import org.hamcrest.Matchers;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.action.ViewActions.click;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static android.support.test.espresso.assertion.ViewAssertions.matches;
-import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
+
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.matcher.RootMatchers.isDialog;
+import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
 @RunWith(AndroidJUnit4.class)
+@LargeTest
 public class MainActivityTest {
 
     @Rule
-    public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule<>(MainActivity.class);
+    public ActivityScenarioRule<MainActivity> activityRule = new ActivityScenarioRule<>(MainActivity.class);
 
     @Test
-    public void testButton1() {
-        // Replace R.id.button1 with the actual ID of the button
-        onView(withId(R.id.start5x5)).perform(click());
-        // Verify that the expected UI change occurs after the button click
-        // For example, if clicking button1 opens a new Fragment, check if that Fragment is displayed
+    public void testHowToPlayDialog() {
+        onView(withId(R.id.howToPlay)).perform(click());
+        onView(withText("How to play?")).inRoot(isDialog()).check(matches(isDisplayed()));
+        String expectedMessage = "Nobody knows! \n \nPS: You can try using double tap and long press.";
+        onView(withText(expectedMessage)).inRoot(isDialog()).check(matches(isDisplayed()));
     }
-
-    @Test
-    public void testButton2() {
-        // Replace R.id.button2 with the actual ID of the button
-        onView(withId(R.id.start8x8)).perform(click());
-        // Add assertions here to verify the result of clicking button2
-    }
-
-    // Add more test methods for other buttons in MainActivity
 }
