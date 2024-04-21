@@ -20,15 +20,19 @@ public class OptionActivity extends AppCompatActivity {
     private ToggleButton flood;
     private SharedPreferences sharedPref;
 
-
-    public OptionActivity(){
-        sharedPref = LoadedGame.mainActivity.getSharedPreferences("cos.premy.mines.settings", Context.MODE_PRIVATE);
-    }
+    // Remove the constructor that's causing the issue
+    // public OptionActivity(){
+    //     sharedPref = LoadedGame.mainActivity.getSharedPreferences("cos.premy.mines.settings", Context.MODE_PRIVATE);
+    // }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_option);
+
+        // Initialize the SharedPreferences here instead of the constructor
+        sharedPref = getSharedPreferences("cos.premy.mines.settings", Context.MODE_PRIVATE);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
