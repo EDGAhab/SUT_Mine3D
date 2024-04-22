@@ -29,6 +29,7 @@ import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 
 import static org.hamcrest.CoreMatchers.allOf;
+import static org.junit.Assert.assertTrue;
 
 
 import cos.premy.mines.graphics.GameActivity;
@@ -72,6 +73,12 @@ public class GameActivityTest {
         onView(withId(R.id.options)).perform(click());
         intended(hasComponent(OptionActivity.class.getName()));
     }
+
+//    @Test
+//    public void testButton5() {
+//        onView(withId(R.id.start5x5)).perform(click());
+//        assertTrue(true);
+//    }
 
     @After
     public void tearDown() {

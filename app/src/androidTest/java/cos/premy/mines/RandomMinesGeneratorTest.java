@@ -1,11 +1,10 @@
-package cos.premy.mines.generator;
+package cos.premy.mines;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
 import java.util.HashSet;
 import java.util.Set;
 
-import cos.premy.mines.MyHappyException;
 import cos.premy.mines.data.MinesContainer;
 import cos.premy.mines.generator.RandomMinesGenerator;
 

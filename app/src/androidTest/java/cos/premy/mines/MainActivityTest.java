@@ -12,6 +12,8 @@ import org.junit.runner.RunWith;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.action.ViewActions.doubleClick;
+import static androidx.test.espresso.action.ViewActions.longClick;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.RootMatchers.isDialog;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
@@ -28,6 +30,22 @@ public class MainActivityTest {
     @Test
     public void testHowToPlayDialog() {
         onView(withId(R.id.howToPlay)).perform(click());
+        onView(withText("How to play?")).inRoot(isDialog()).check(matches(isDisplayed()));
+        String expectedMessage = "Nobody knows! \n \nPS: You can try using double tap and long press.";
+        onView(withText(expectedMessage)).inRoot(isDialog()).check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void testLongHold() {
+        onView(withId(R.id.howToPlay)).perform(longClick());
+        onView(withText("How to play?")).inRoot(isDialog()).check(matches(isDisplayed()));
+        String expectedMessage = "Nobody knows! \n \nPS: You can try using double tap and long press.";
+        onView(withText(expectedMessage)).inRoot(isDialog()).check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void testDoubleClick() {
+        onView(withId(R.id.howToPlay)).perform(doubleClick());
         onView(withText("How to play?")).inRoot(isDialog()).check(matches(isDisplayed()));
         String expectedMessage = "Nobody knows! \n \nPS: You can try using double tap and long press.";
         onView(withText(expectedMessage)).inRoot(isDialog()).check(matches(isDisplayed()));
