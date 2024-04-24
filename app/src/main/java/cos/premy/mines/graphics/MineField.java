@@ -290,12 +290,12 @@ public class MineField extends AbstractDrawable {
     protected void sendVerifiedDoubleTap(int x, int y) {
         switch (data.getStatus()) {
             case UNBLOCKED:
-            data.setGameStatus(MineStatus.OPENED, gameStatus);
-            refreshLines();
-            refreshAnimations();
-            if (gameStatus.getFlood() && (data.getNeighbors() == 0)) {
-                grid.autoFlood(data.getAllNeighborCoords());
-            }
+                data.setGameStatus(MineStatus.OPENED, gameStatus);
+                refreshLines();
+                refreshAnimations();
+                if (gameStatus.getFlood() && (data.getNeighbors() == 0)) {
+                    grid.autoFlood(data.getAllNeighborCoords());
+                }
             break;
         }
     }

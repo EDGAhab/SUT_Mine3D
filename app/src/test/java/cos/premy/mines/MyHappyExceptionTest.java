@@ -20,6 +20,7 @@ public class MyHappyExceptionTest {
                 MyHappyException.getMessage(ANIMATION_HASNT_BEEN_CONFIGURED));
     }
 
+
     @Test
     public void testConstructor() {
         MyHappyException myHappyException = new MyHappyException(MINE_IS_FACTORIZED);
