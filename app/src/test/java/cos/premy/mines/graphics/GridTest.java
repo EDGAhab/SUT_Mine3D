@@ -62,19 +62,19 @@ public class GridTest {
 
     @Test
     public void testSendVerifiedTap() {
-        grid.sendVerifiedTap(2, 2);
+        grid.sendVerifiedTap(50, 50);
         verify(mockGameStatus, times(1)).getLevel();
     }
 
     @Test
     public void testSendVerifiedDoubleTap() {
-        grid.sendVerifiedDoubleTap(2, 2);
+        grid.sendVerifiedDoubleTap(50, 50);
         verify(mockGameStatus, times(1)).getLevel();
     }
 
     @Test
     public void testSendVerifiedLongTap() {
-        grid.sendVerifiedLongTap(2, 2);
+        grid.sendVerifiedLongTap(50, 50);
         verify(mockGameStatus, times(1)).getLevel();
     }
 
