@@ -22,7 +22,7 @@ import cos.premy.mines.data.MineStatus;
 import cos.premy.mines.data.MinesContainer;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(sdk = {23})
+@Config(sdk = {Config.OLDEST_SDK})
 public class GridTest {
     @Mock private MinesContainer mockMineContainer;
     @Mock private GameStatus mockGameStatus;

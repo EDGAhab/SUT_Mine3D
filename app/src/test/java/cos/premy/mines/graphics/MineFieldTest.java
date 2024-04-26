@@ -25,7 +25,7 @@ import cos.premy.mines.graphics.animations.LineAnimation;
 
 
 @RunWith(RobolectricTestRunner.class)
-@Config(sdk = 23)
+@Config(sdk = {Config.OLDEST_SDK})
 public class MineFieldTest {
     @Mock private Grid mockGrid;
     @Mock private Mine mockMine;
