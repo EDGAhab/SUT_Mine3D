@@ -20,7 +20,7 @@ import cos.premy.mines.GameStatus;
 import cos.premy.mines.data.MinesContainer;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(sdk = {23})
+@Config(sdk = {Config.OLDEST_SDK})
 public class StatusLabelTest {
     @Mock private MinesContainer mockMinesContainer;
     @Mock private GameStatus mockGameStatus;

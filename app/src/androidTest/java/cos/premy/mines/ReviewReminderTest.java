@@ -38,13 +38,13 @@ public class ReviewReminderTest {
         when(mockEditor.putBoolean(anyString(), anyBoolean())).thenReturn(mockEditor);
     }
 
-//    @Test
-//    public void reviewReminder_ShowsDialog_WhenReadyForReview() {
-//        when(mockSharedPreferences.getBoolean("ready", false)).thenReturn(true);
-//        when(mockSharedPreferences.getBoolean("reviewed", false)).thenReturn(false);
-//        ReviewReminder.startPotentialReviewReminding(mockActivity);
-//        verify(mockDialog).show();
-//    }
+    @Test
+    public void reviewReminder_ShowsDialog_WhenReadyForReview() {
+        when(mockSharedPreferences.getBoolean("ready", false)).thenReturn(true);
+        when(mockSharedPreferences.getBoolean("reviewed", false)).thenReturn(false);
+        ReviewReminder.startPotentialReviewReminding(mockActivity);
+        verify(mockDialog).show();
+    }
 
     @Test
     public void reviewReminder_DoesNotShowDialog_WhenAlreadyReviewed() {
@@ -53,11 +53,11 @@ public class ReviewReminderTest {
         ReviewReminder.startPotentialReviewReminding(mockActivity);
     }
 
-//    @Test
-//    public void reviewReminder_SetsReviewed_WhenUserChoosesToRate() {
-//        mockEditor.commit();
-//        verify(mockEditor).putBoolean("reviewed", true);
-//        verify(mockEditor).commit();
-//    }
+    @Test
+    public void reviewReminder_SetsReviewed_WhenUserChoosesToRate() {
+        mockEditor.commit();
+        verify(mockEditor).putBoolean("reviewed", true);
+        verify(mockEditor).commit();
+    }
 }
 
